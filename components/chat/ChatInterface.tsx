@@ -89,19 +89,19 @@ export function ChatInterface() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl mx-auto text-sm">
               <div className="bg-white p-4 rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
                 <strong>🛍️ Produtos</strong><br />
-                "Produto não aparece no site"
+                &quot;Produto não aparece no site&quot;
               </div>
               <div className="bg-white p-4 rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
                 <strong>🔐 APIs</strong><br />
-                "Erro 401 unauthorized"
+                &quot;Erro 401 unauthorized&quot;
               </div>
               <div className="bg-white p-4 rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
                 <strong>💳 Checkout</strong><br />
-                "Problemas no pagamento"
+               &quot;Problemas no pagamento&quot;
               </div>
               <div className="bg-white p-4 rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
                 <strong>📦 Estoque</strong><br />
-                "Como configurar inventory"
+                &quot;Como configurar inventory&quot;
               </div>
             </div>
           </div>
