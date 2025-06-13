@@ -72,7 +72,7 @@ export function ChatInterface() {
           </div>
           <div>
             <h1 className="text-2xl font-bold">Assistente IA VTEX</h1>
-            <p className="text-blue-100">FG Solutions - Suporte Técnico Especializado</p>
+            <p className="text-blue-100">FG IA Lab - Suporte Técnico IA Vtex</p>
           </div>
         </div>
       </div>
