@@ -10,7 +10,7 @@ const handler = NextAuth({
   ],
   callbacks: {
     async signIn({ user, account, profile }) {
-      // Só permitir emails @fg.com.br
+      // Só permitir emails @agenciafg.com.br
       if (user.email?.endsWith('@agenciafg.com.br')) {
         console.log(`Login autorizado: ${user.email}`)
         return true
