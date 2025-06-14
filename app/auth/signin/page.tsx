@@ -8,12 +8,27 @@ export default function SignIn() {
   const [providers, setProviders] = useState<any>(null)
 
   useEffect(() => {
-    const getAuthProviders = async () => {
+  const getAuthProviders = async () => {
+    try {
       const res = await getProviders()
+      console.log('Providers:', res) // Debug
       setProviders(res)
+    } catch (error) {
+      console.error('Erro ao buscar providers:', error)
+      // Fallback: definir provider manualmente
+      setProviders({
+        google: {
+          id: 'google',
+          name: 'Google',
+          type: 'oauth',
+          signinUrl: '/api/auth/signin/google',
+          callbackUrl: '/api/auth/callback/google'
+        }
+      })
     }
-    getAuthProviders()
-  }, [])
+  }
+  getAuthProviders()
+}, [])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
