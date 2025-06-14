@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Send, Bot, User } from 'lucide-react'
+import { useSession, signOut } from 'next-auth/react'
 
 interface Message {
   id: string
@@ -14,6 +15,7 @@ export function ChatInterface() {
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
+  const { data: session } = useSession()
 
   const sendMessage = async () => {
     if (!input.trim()) return
@@ -64,18 +66,36 @@ export function ChatInterface() {
 
   return (
     <div className="flex flex-col h-screen max-w-6xl mx-auto bg-gray-50">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 shadow-lg">
-        <div className="flex items-center space-x-3">
-          <div className="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-            <Bot className="w-7 h-7 text-white" />
-          </div>
-          <div>
-            <h1 className="text-2xl font-bold">Assistente IA VTEX</h1>
-            <p className="text-blue-100">FG IA Lab - Suporte Técnico IA Vtex</p>
-          </div>
-        </div>
+   {/* Header */}
+<div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 shadow-lg">
+  <div className="flex items-center justify-between">
+    <div className="flex items-center space-x-3">
+      <div className="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
+        <Bot className="w-7 h-7 text-white" />
       </div>
+      <div>
+        <h1 className="text-2xl font-bold">Assistente IA VTEX</h1>
+        <p className="text-blue-100">FG Solutions - Suporte Técnico Especializado</p>
+      </div>
+    </div>
+    
+    {/* Info do usuário + Logout */}
+    {session?.user && (
+      <div className="flex items-center space-x-4">
+        <div className="text-right">
+          <div className="text-sm font-medium">{session.user.name}</div>
+          <div className="text-blue-200 text-xs">{session.user.email}</div>
+        </div>
+      <button
+  onClick={() => signOut({ callbackUrl: '/auth/signin' })}
+  className="border border-white border-opacity-50 hover:bg-white hover:text-blue-600 text-white rounded-lg px-4 py-2 text-sm transition-colors"
+>
+  Sair
+</button>
+      </div>
+    )}
+  </div>
+</div>
 
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-6 space-y-4">

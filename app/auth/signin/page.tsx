@@ -27,7 +27,7 @@ export default function SignIn() {
             Assistente IA VTEX
           </h1>
           <p className="text-gray-600">
-            FG Solutions - Suporte Técnico Especializado
+            Agência FG - FG IA Lab - Suporte Técnico Especializado
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function SignIn() {
           </div>
 
           {/* Botão de Login */}
-          {providers && (
+          {providers ? (
             <div className="space-y-4">
               {Object.values(providers).map((provider: any) => (
                 <button
@@ -62,6 +62,11 @@ export default function SignIn() {
                   </span>
                 </button>
               ))}
+            </div>
+          ) : (
+            <div className="text-center py-4">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+              <p className="text-gray-500 mt-2">Carregando...</p>
             </div>
           )}
 
