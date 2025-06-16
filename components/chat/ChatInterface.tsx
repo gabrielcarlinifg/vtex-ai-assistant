@@ -74,8 +74,8 @@ export function ChatInterface() {
         <Bot className="w-7 h-7 text-white" />
       </div>
       <div>
-        <h1 className="text-2xl font-bold">Assistente IA VTEX</h1>
-        <p className="text-blue-100">FG Solutions - Suporte Técnico Especializado</p>
+        <h1 className="text-2xl font-bold">FG IA Lab - Assistente IA VTEX</h1>
+        <p className="text-blue-100">Agência FG - Suporte Técnico Especializado</p>
       </div>
     </div>
     

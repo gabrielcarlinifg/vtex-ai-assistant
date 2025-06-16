@@ -42,7 +42,7 @@ export default function SignIn() {
             Assistente IA VTEX
           </h1>
           <p className="text-gray-600">
-            Agência FG - FG IA Lab - Suporte Técnico Especializado
+            Agência FG - FG IA Lab - Suporte Técnico Especializado VTEX
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export default function SignIn() {
         {/* Footer */}
         <div className="text-center mt-6">
           <p className="text-xs text-gray-500">
-            Assistente especializado em VTEX • Baseado em developers.vtex.com + help.vtex.com
+            Assistente IA especializado em VTEX • Baseado em developers.vtex.com + help.vtex.com
           </p>
         </div>
       </div>

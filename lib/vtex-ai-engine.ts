@@ -209,7 +209,7 @@ Instruções:
             role: "system",
             content: `Você é um assistente especializado em VTEX com acesso completo à documentação oficial.
 
-Contexto: FG Solutions - empresa de implementação VTEX prestando suporte técnico.
+Contexto: Agência FG - empresa de implementação VTEX prestando suporte técnico e evolução.
 
 Base de conhecimento principal:
 - developers.vtex.com (APIs, integrações, desenvolvimento)

@@ -6,7 +6,7 @@ import { Providers } from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Assistente IA VTEX - FG Solutions',
+  title: 'Assistente IA VTEX - Agência FG',
   description: 'Assistente de IA especializado em VTEX para suporte técnico',
 }
 
