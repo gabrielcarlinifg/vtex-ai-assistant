@@ -70,8 +70,12 @@ export function ChatInterface() {
 <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 shadow-lg">
   <div className="flex items-center justify-between">
     <div className="flex items-center space-x-3">
-      <div className="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-        <Bot className="w-7 h-7 text-white" />
+     <div className="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center overflow-hidden">
+        <img 
+          src="/logo.png" 
+          alt="Agência FG Logo" 
+          className="w-8 h-8 object-contain"
+        />
       </div>
       <div>
         <h1 className="text-2xl font-bold">FG IA Lab - Assistente IA VTEX</h1>
