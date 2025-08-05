@@ -3,7 +3,13 @@ import type { NextRequest } from 'next/server'
 import { getToken } from 'next-auth/jwt'
 
 export async function middleware(request: NextRequest) {
-  // Verificar se está nas rotas protegidas
+  // Rotas públicas que não precisam de autenticação
+  const publicRoutes = ['/portal', '/api/tickets', '/api/demo']
+  const isPublicRoute = publicRoutes.some(route => 
+    request.nextUrl.pathname.startsWith(route)
+  )
+  
+  // Verificar se está nas rotas protegidas (equipe interna)
   if (request.nextUrl.pathname === '/' || request.nextUrl.pathname.startsWith('/api/chat')) {
     const token = await getToken({ req: request })
     
